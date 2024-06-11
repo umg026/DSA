@@ -176,5 +176,43 @@ function intersection(arr1, arr2) {
 }
 
 // console.log(
-    intersection([1, 2, 3], [2, 3, 4])
+intersection([1, 2, 3], [2, 3, 4])
 // )
+
+// ===================================================
+// Q8 : Fibonacci serires  --> 0,1,1,2,3,5,8,13,21,34,55,89,144,233
+// recursion
+// f(n-1) + f(n-2) for n > 1
+
+const fib = function (n) {
+    if (n <= 1) return n
+
+    return fib(n - 1) + fib(n - 2)
+}
+// console.log(
+fib(8)
+// )
+
+// ===================================================
+// Q9 : valid anagram
+// an anagram is a wordor phase fromed by rearranging the letters 
+// of a diifrence word or phase using all original letter exactly once 
+
+// input  "rat" =>   "car" ---> false
+
+const same = function (s, t) {
+    const frist = s.split("").sort().join()
+    const sencond = t.split("").sort().join()
+
+    return frist === sencond ? "true" : "false"
+}
+
+// console.log(
+same("jay", "yja")
+// )
+
+
+// ===================================================
+// Q10 : two sum 
+// given an array of integers nums and an interger Target,
+// return indices of the two numbers such that they add up to target. 
