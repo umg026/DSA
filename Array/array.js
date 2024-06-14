@@ -213,6 +213,37 @@ same("jay", "yja")
 
 
 // ===================================================
-// Q10 : two sum 
+// Q10 : two sum
 // given an array of integers nums and an interger Target,
-// return indices of the two numbers such that they add up to target. 
+// return indices of the two numbers such that they add up to target.
+
+// input  nums =[2,7,11,15] target =9
+// output ==>  [0,1]
+
+const nums = function (arr, target) {
+
+  
+    for (let i = 0; i < arr.length; i++) {
+        const sum = arr[i] + arr[i + 1]
+
+        if (sum == target) {
+            return [i, i + 1]
+        }
+
+    }
+    return []
+}
+// console.log(
+    nums([1, 2, 3, 4, 5], 9)
+// )
+
+
+// ===================================================
+// Q11 : best time to buy and sell stocks 
+// you are given an array prices where prices[i] is the price of a given stock on the ith day 
+// you want to maximzie your profit by chosing a songle day to buy one stock and choosing a diifrnet
+//  day in the future to sell that stock.
+// retun the maximum profit if you cant achive any profit then retun 0
+
+// input = price [7,1,5,3,6,4] ----> output 5
+
