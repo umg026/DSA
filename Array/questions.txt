@@ -1,0 +1,35 @@
+11. Given an array of integers, find the longest consecutive sequence.
+
+Example: Input: [1, 2, 3, 4, 5, 7, 8, 9], Output: [1, 2, 3, 4, 5]
+
+12. Write a function to find the minimum element in an array.
+
+Example: Input: [5, 3, 8, 2, 1], Output: 1
+
+13. Given an array of integers, find the number of elements that are greater than a given element.
+
+Example: Input: [1, 2, 3, 4, 5], x = 3, Output: 2 (elements 4 and 5 are greater than 3)
+
+14. Write a function to find the median of an array.
+
+Example: Input: [1, 2, 3, 4, 5], Output: 3
+
+15. Given an array of integers, find the first element that is not equal to its index.
+
+Example: Input: [0, 1, 2, 3, 4], Output: 4 (index 4 has value 4, but index 0 has value 0)
+
+16. Write a function to find the maximum product of two elements in an array.
+
+Example: Input: [1, 2, 3, 4, 5], Output: 20 (product of 4 and 5)
+
+17. Given an array of integers, find the number of elements that are less than a given element.
+
+Example: Input: [1, 2, 3, 4, 5], x = 3, Output: 2 (elements 1 and 2 are less than 3)
+
+18. Write a function to find the longest subarray with a given sum.
+
+Example: Input: [1, 2, 3, 4, 5], sum = 9, Output: [2, 3, 4]
+
+19. Given an array of integers, find the first element that appears only once.
+
+Example: Input: [1, 2, 2, 3, 3, 4],

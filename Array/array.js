@@ -193,6 +193,8 @@ const fib = function (n) {
 fib(8)
 // )
 
+
+
 // ===================================================
 // Q9 : valid anagram
 // an anagram is a wordor phase fromed by rearranging the letters 
@@ -222,7 +224,7 @@ same("jay", "yja")
 
 const nums = function (arr, target) {
 
-  
+
     for (let i = 0; i < arr.length; i++) {
         const sum = arr[i] + arr[i + 1]
 
@@ -234,16 +236,159 @@ const nums = function (arr, target) {
     return []
 }
 // console.log(
-    nums([1, 2, 3, 4, 5], 9)
+nums([1, 2, 3, 4, 5], 9)
 // )
 
 
 // ===================================================
-// Q11 : best time to buy and sell stocks 
-// you are given an array prices where prices[i] is the price of a given stock on the ith day 
+// Q11 : best time to buy and sell stocks
+// you are given an array prices where prices[i] is the price of a given stock on the ith day
 // you want to maximzie your profit by chosing a songle day to buy one stock and choosing a diifrnet
 //  day in the future to sell that stock.
 // retun the maximum profit if you cant achive any profit then retun 0
 
 // input = price [7,1,5,3,6,4] ----> output 5
 
+
+// ===================================================
+// Q12 :  Given an array of integers, find the maximum element in the array.
+
+// Example: Input: [3, 5, 2, 7, 1], Output: 7
+
+function findmaxInt(nums) {
+    return Math.max(...nums)
+
+}
+// console.log(
+"anser :", findmaxInt([3, 5, 2, 7, 1])
+// )
+
+// ===================================================
+// Q13 :  Write a function to reverse an array of integers.
+
+// Example: Input: [1, 2, 3, 4, 5], Output: [5, 4, 3, 2, 1]
+
+function reverseArr(nums) {
+    return nums.sort((a, b) => b - a)
+}
+// console.log(
+reverseArr([1, 2, 3, 4, 5])
+// )
+
+
+// ============================================================
+// Q 14 :  Given an array of integers, find the first duplicate element.
+
+// Example: Input: [1, 2, 3, 4, 2], Output: 2
+
+function duplicate(nums) {
+    const seen = new Set()
+
+    for (let i = 0; i < nums.length; i++) {
+        if (seen.has(nums[i])) {
+            return nums[i]
+        }
+        else {
+            seen.add(nums[i])
+        }
+
+    }
+
+    return "no dupicate found"
+
+}
+// console.log(
+duplicate([1, 2, 3, 4, 2])
+// )
+
+
+// ============================================================
+// Q 15 :  Given an array of integers, find the number of pairs with a given sum.
+// Example: Input: [1, 2, 3, 4, 5], sum = 7, Output: 2 (pairs: (2, 5) and (3, 4))
+
+function findPair(arr, k) {
+    let count = 0;
+    let seen = new Map();
+
+    for (let i = 0; i < arr.length; i++) {
+        let complement = k - arr[i];
+        if (seen.has(complement)) {
+            count += seen.get(complement);
+        }
+        seen.set(arr[i], (seen.get(arr[i]) || 0) + 1);
+    }
+
+    return count;
+}
+
+// console.log(
+findPair([1, 2, 3, 4, 5], 7)
+// ); // Output: 2 (pairs: (2, 5) and (3, 4))
+
+// ==========================================================
+
+// Q16 . Write a function to find the maximum difference between two elements in an array.
+//
+// Example: Input: [3, 5, 2, 7, 1], Output: 6 (difference between 7 and 1)
+
+function findMax(nums) {
+    if (nums.length < 2) {
+        return 0;
+    }
+
+    let minElement = nums[0];
+    let maxElement = nums[0];
+
+    for (let i = 1; i < nums.length; i++) {
+
+        if (nums[i] < minElement) {
+            minElement = nums[i];
+        }
+
+        if (nums[i] > maxElement) {
+            maxElement = nums[i];
+        }
+    }
+    return maxElement - minElement;
+}
+
+// console.log(
+"result", findMax([3, 5, 2, 7, 1])
+// );
+// =====================================================
+// 10. Write a function to rotate an array by a given number of positions.
+
+// Example: Input: [1, 2, 3, 4, 5], k = 2, Output: [4, 5, 1, 2, 3]
+
+function rotateByNum(nums, k) {
+    k = k % nums.length
+
+    const newArr = nums.splice(nums.length - k)
+
+    return newArr.concat(nums)
+}
+// console.log(
+"rotate arr :", rotateByNum([1, 2, 3, 4, 5], 2)
+// )
+
+
+// ================================================
+// 11. Given an array of integers, find the longest consecutive sequence.
+
+// Example: Input: [1, 2, 3, 4, 5, 7, 8, 9], Output: [1, 2, 3, 4, 5]
+
+// function findLogest(nums) {
+
+//     let value = 0;
+//     let minIndex = nums[0]
+
+//     for (let i = 1; i < nums.length; i++) {
+//         if (minIndex + nums[i] == nums[i + 1]) {
+//             value = nums[i + 1]
+
+//             nums.slice(0, value)
+//         }
+
+//     }
+// }
+// console.log(findLogest([1, 2, 3, 4, 5, 7, 8, 9]))
