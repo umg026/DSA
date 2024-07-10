@@ -27,3 +27,17 @@ function recursiveArr(nums) {
 recursiveArr([1, 2, 3, 4])
 // )
 
+//  Ex 3 :=========================================>>>
+// Decimal to binary number using recursion
+// Given a decimal number as input, we need to write a program to convert the given decimal number into an equivalent binary number. 
+
+// Input : 7                                                         
+// Output :111
+
+// Input :10
+// Output :1010
+
+
+
+
+// ========================================================

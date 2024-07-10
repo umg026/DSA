@@ -46,18 +46,38 @@ seq(5)
 
 function meanArr(nums, n) {
 
-    if (nums.length === 0) return 0
-
-    else {
-        const sum = nums[n - 1] + meanArr(nums, n - 1)
-        if ( n === nums) {
-
-        }
+    if (n <= 0) {
+        return 0
     }
 
+    const sum = nums[n - 1] + meanArr(nums, n - 1)
+    if (n === nums.length) {
+        return sum / n
 
+    }
+
+    return sum;
 }
-const arr = [1, 2, 3, 4, 5]
+const arr = [1, 2, 3]
 const lenght = arr.length
-console.log(meanArr(arr, lenght))
-// meanArr([1, 2, 3])
+// console.log(
+meanArr(arr, lenght)
+// )
+
+// =============================================
+// Sum of natural numbers using recursion
+// Given a number n, find sum of first n natural numbers. To calculate the sum, we will use a recursive function recur_sum().
+// Input : 3
+// Output : 6
+// Explanation : 1 + 2 + 3 = 6
+
+
+function sumsOfNatural(nums) {
+    if (nums <= 0) {
+        return 0
+    }
+    return nums + sumsOfNatural(nums - 1)
+}
+console.log(
+    sumsOfNatural(5)
+)
