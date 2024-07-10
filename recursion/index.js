@@ -23,5 +23,7 @@ function recursiveArr(nums) {
 
     return nums[0] * recursiveArr(nums.slice(1))
 }
-console.log(recursiveArr([1, 2, 3, 4]))
+// console.log(
+recursiveArr([1, 2, 3, 4])
+// )
 
