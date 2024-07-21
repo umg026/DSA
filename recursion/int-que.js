@@ -51,11 +51,11 @@ function meanArr(nums, n) {
     }
 
     const sum = nums[n - 1] + meanArr(nums, n - 1)
+
     if (n === nums.length) {
         return sum / n
 
     }
-
     return sum;
 }
 const arr = [1, 2, 3]
@@ -77,7 +77,66 @@ function sumsOfNatural(nums) {
         return 0
     }
     return nums + sumsOfNatural(nums - 1)
+
 }
-console.log(
-    sumsOfNatural(5)
-)
+// console.log(
+sumsOfNatural(5)
+// )
+
+// ==========================================
+// Write a recursive function to print the reverse of a given string. 
+
+function reverse(str, len) {
+    if (len == str.length) {
+        return
+    }
+    reverse(str, len + 1)
+
+    // console.log(str[len])
+
+}
+let a = "Geeks for Geeks";
+
+reverse(a, 0);
+
+
+// ===============================
+// fibonacci number find 
+
+function fibonacci_numbers(n) {
+    if (n == 0) {
+        return 0;
+    }
+    else if (n == 1) {
+        return 1;
+    }
+    else {
+        return fibonacci_numbers(n - 2) + fibonacci_numbers(n - 1);
+
+    }
+}
+
+
+let n = 3;
+for (let i = 0; i < n; i++) {
+    // console.log(
+    fibonacci_numbers(i) + " "
+    // );
+}
+
+// ======================================
+// find minimum in array using recursion 
+
+function findMinimum(arr, len) {
+    if (len == 1) {
+        return arr[0]
+    }
+
+    return Math.min(arr[len - 1], findMinimum(arr, len - 1))
+
+}
+
+const arraya = [3, 5, 1, 8, 2]
+const n1 = arraya.length
+
+console.log("minimum is :", findMinimum(arraya, n1))
