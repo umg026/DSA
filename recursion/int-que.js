@@ -17,6 +17,7 @@ function printN(n) {
 }
 
 printN(5)
+
 // Q2 :=============================================
 // Print N to 1 without loop
 // You are given an integer N. Print numbers from N to 1 without the help of loops.
@@ -43,100 +44,63 @@ seq(5)
 
 // Mean = (Sum of elements of the Array) /
 //        (Total no of elements in Array)
+const Arr = [1, 2, 3, 4, 5]
+const N = Arr.length;
 
-function meanArr(nums, n) {
+const Mean = function (A, N) {
 
-    if (n <= 0) {
-        return 0
+    if (N == 1) {
+        return A[N - 1];
+    }
+    else {
+        return (Mean(A, N - 1) * (N - 1) + A[N - 1]) / N;
     }
 
-    const sum = nums[n - 1] + meanArr(nums, n - 1)
-
-    if (n === nums.length) {
-        return sum / n
-
-    }
-    return sum;
 }
-const arr = [1, 2, 3]
-const lenght = arr.length
-// console.log(
-meanArr(arr, lenght)
-// )
+//  console.log("Mean Arr : ", Mean(Arr,N))
 
-// =============================================
+// ========================================================
 // Sum of natural numbers using recursion
-// Given a number n, find sum of first n natural numbers. To calculate the sum, we will use a recursive function recur_sum().
 // Input : 3
 // Output : 6
 // Explanation : 1 + 2 + 3 = 6
 
-
-function sumsOfNatural(nums) {
-    if (nums <= 0) {
-        return 0
+function sumNutral(n) {
+    if (n <= 1) {
+        return n
     }
-    return nums + sumsOfNatural(nums - 1)
-
+    return n + sumNutral(n - 1)
+    //     5 + sumNutral(4) = 10 + 5 = 15
+    //     4 + sumNutral(3) = 6 + 4 = 10
+    //     3 + sumNutral(2)= 3 + 3 = 6
+    //     2 + sumNutral(1) = 2 + 1 = 3
+    //     5 + sumNutral(4)
+    // 1,2,3,4,5 = 15
 }
-// console.log(
-sumsOfNatural(5)
-// )
+sumNutral(5)
 
-// ==========================================
-// Write a recursive function to print the reverse of a given string. 
+// ===============================
+// Print reverse of a string using recursion
 
-function reverse(str, len) {
+function reverseStr(str,len) {
     if (len == str.length) {
         return
     }
-    reverse(str, len + 1)
+    reverseStr(str, len +1)
 
     // console.log(str[len])
-
 }
-let a = "Geeks for Geeks";
+reverseStr("umang prajapati",0)
 
-reverse(a, 0);
+// ========================================
+// Program for factorial of a number
+// Input: 5
+// Output: 120
+// Explanation: 5! = 5 * 4 * 3 * 2 * 1 = 120
 
+function factoria(n) {
+    if (n <= 1) return n ;
 
-// ===============================
-// fibonacci number find 
-
-function fibonacci_numbers(n) {
-    if (n == 0) {
-        return 0;
-    }
-    else if (n == 1) {
-        return 1;
-    }
-    else {
-        return fibonacci_numbers(n - 2) + fibonacci_numbers(n - 1);
-
-    }
+    return n * factoria(n - 1);
 }
-
-
-let n = 3;
-for (let i = 0; i < n; i++) {
-    // console.log(
-    fibonacci_numbers(i) + " "
-    // );
-}
-
-// ======================================
-// find minimum in array using recursion 
-
-function findMinimum(arr, len) {
-    if (len == 1) {
-        return arr[0]
-    }
-
-    return Math.min(arr[len - 1], findMinimum(arr, len - 1))
-
-}
-
-const arraya = [3, 5, 1, 8, 2]
-const n1 = arraya.length
-
-console.log("minimum is :", findMinimum(arraya, n1))
+console.log(factoria(5))

@@ -1,35 +1,4 @@
-what is recursion in javascript  ??
- ---> 
- Recursion is a problem-solving technique in programming.
-
-What is a Recursive Function?
-A recursive function is a function that calls itself somewhere within the body of the function. Below is a basic example of a recursive function.
-
-function recursiveFunc() {
-  recursiveFunc()
-}
-=========
-
-The Three Parts of a Recursive Function 
-
-Every time you write a recursive function, three elements must be present. They are:
-
-*The function definition.
-*The base condition.
-*The recursive call.
-
-==========
-What is a base condition?
-When using a recursive function, the base condition is what lets the function know when to stop calling itself. Once the base condition is met, the recursion ends.
-if we dont add any base condition the it gone infinity loop.
-
-function recursiveFunc() {
-  if(base condition) {
-    // stops recursion if condition is met
-  }
-  // else recursion continues
-  recurse();
-}
-interview question :
-
-https://www.geeksforgeeks.org/top-50-interview-  problems-on-recursion-algorithm/   
+Q1 : https://www.geeksforgeeks.org/decimal-binary-number-using-recursion/
+Q2 : https://www.geeksforgeeks.org/mean-of-array-using-recursion/
+Q3 : https://www.geeksforgeeks.org/sum-digit-number-using-recursion/
+Q4 ; https://www.geeksforgeeks.org/recursive-programs-to-find-minimum-and-maximum-elements-of-array/
