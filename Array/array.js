@@ -130,7 +130,6 @@ function shortedArray(nums) {
     let arr = [...nums].sort((a, b) => a - b)
     let isEqual = arr.every((value, index) => value === nums[index]) // check arr every elemet is equal to nums
 
-
     // if (isEqual) {
     //     console.log("array is shoetrd", arr)
 
@@ -291,11 +290,8 @@ function duplicate(nums) {
         else {
             seen.add(nums[i])
         }
-
     }
-
     return "no dupicate found"
-
 }
 // console.log(
 duplicate([1, 2, 3, 4, 2])
